@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 
 // Connect to mongoose first then create object schema from here, easier
 // specify gaSpaceX as the db name
-mongoose.connect('mongodb://localhost/gaSpaceX', {
+mongoose.connect('mongodb://localhost/pokedexAPI', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -39,5 +39,5 @@ db.on('error', (err) => {
 // }
 
 module.exports = {
-    Capsule: require('./capsule')
+    Pokemon: require('./pokemon')
 };

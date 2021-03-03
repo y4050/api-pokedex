@@ -2,15 +2,14 @@ const mongoose = require('mongoose');
 // this brings in the Schema class from mongoose for us to build with
 const Schema = mongoose.Schema;
 
-// Make a capsuleSchema
-const capsuleSchema = new Schema({
+// Make a pokeSchema
+const pokeSchema = new Schema({
     // serial: {type: String, unique: true, required: true}, // for including unique and/or required
-    serial: { type: String, unique: true},
-    type: String,
-    waterLandings: Number
+    name: { type: String, unique: true},
+    url: String
 });
 
 // Model
-const Capsule = mongoose.model("Capsule", capsuleSchema);
+const Pokemon = mongoose.model("Pokemon", pokeSchema);
 
-module.exports = Capsule;
+module.exports = Pokemon;
